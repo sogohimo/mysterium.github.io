@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шифрованное сообщение</title>
+</head>
+<body>
+  <h2>Фышюр опфхшы мэпф мэпь ямфх</h2>
+  <p>Пф тфкщфяфх щшфхэфш мфию щхлфщьэ нфхф.<br>
+  Уфхщйщфюьфх вюшфхфэфэ,<br>
+  Пф элшрь уфхщф хфтф ъфрп.</p>
+
+  <form id="myForm">
+    <label for="inputNumber"></label>
+    <input type="password" id="inputNumber" name="inputNumber" required>
+    <button type="submit">Идти дальше</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    document.oncontextmenu=function(e){return false};
+    const form = document.getElementById("myForm");
+    const resultMessage = document.getElementById("result");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const inputNumber = parseInt(document.getElementById("inputNumber").value);
+
+      if (inputNumber === 4) {
+        resultMessage.innerHTML = `
+          Поздравляю, Виктория! Ты совершила первый шаг, который не только открыл перед тобой возможность ощутить себя хакером, но также погрузил тебя в мою реальность.
+          Следующий шаг будет тяжелее и тяжелее. Помни, что от каждого твоего решения будет зависеть итог игры, коих задумано большое множество. Некоторые решения могут нанести тебе огромный ущерб, потому думай постоянно, прежде сделать какой-то выбор.
+        `;
+      } else {
+        resultMessage.innerHTML = "Ошибка";
+      }
+    });
+  </script>
+</body>
+</html>
